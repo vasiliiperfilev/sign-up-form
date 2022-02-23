@@ -3,7 +3,7 @@ function checkPasswordMatch(password, confirmPassword){
 }
 
 function changeDisplay(element, isVisible){
-    isVisible ? element.style.display = "none" : element.style.display = "block";
+    isVisible ? element.style.maxHeight = "0px" : element.style.maxHeight = "200px";
 }
 
 function changeErrorVisibility(isValid){

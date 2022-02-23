@@ -180,9 +180,10 @@ label>input:invalid{
 }
 
 .error {
-    display: none;
     color: red;
+    max-height: 0;
     transition: 0.5s;
+    overflow: hidden;
 }
 
 label>input:valid{
