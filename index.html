@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
+    <link rel="stylesheet" href="./Assets/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <main>
         <div class="image">
             <div class="logo"><span>ODIN</span></div>
             <span class="credits">
-                Photo by Halie West on 
+                Photo by Halie West on
                 <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a>
             </span>
         </div>
         <div class="content">
-            <p>This is not a real online service! You know you need something 
-                like this in your life to help you realize your 
-                deepest dreams. Sign up <em>now</em> to get started.</em></p>
-            <p>You <em>know</em> you want to.</p>
-            <form action="/post-script" method="post">
-                <h3>Let's do this!</h3>
-                <section>
-                    <p>Required fields are followed by *.</p>
-                    <p>
-                        <label for="fname">
-                            <span>FIRST NAME*</span>
-                            <input type="text" name="first_name" id="fname">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="lname">
-                            <span>LAST NAME</span>
-                            <input type="text" name="last_name" id="lname">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="email">
-                            <span>EMAIL*</span>
-                            <input type="email" name="email" id="email">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="phone">
-                            <span>PHONE NUMBER</span>
-                            <input type="tel" name="phone" id="phone">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="password">
-                            <span>PASSWORD*</span>
-                            <input type="password" name="password" id="password">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="c-password">
-                            <span>CONFIRM PASSWORD*</span>
-                            <input type="password" name="c_password" id="c-password">
-                        </label>
-                    </p>
-                </section>
-                <section>
-                    <p><button type="submit">Create Account</button></p>
-                </section>
-            </form>
-            <p>
-                Already have an account? 
-                <a href="log-in-page">Log in</a>
-            </p>
+            <div class="wrapper">
+                <p>This is not a real online service! You know you need something
+                    like this in your life to help you realize your
+                    deepest dreams. Sign up <em>now</em> to get started.</em></p>
+                <p>You <em>know</em> you want to.</p>
+                <form action="/post-script" method="post">
+                    <section>
+                        <h3>Let's do this!</h3>
+                        <p>Required fields are followed by *.</p>
+                        <p>
+                            <label for="fname">
+                                <span>FIRST NAME*</span>
+                                <input type="text" name="first_name" id="fname" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="lname">
+                                <span>LAST NAME</span>
+                                <input type="text" name="last_name" id="lname">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="email">
+                                <span>EMAIL*</span>
+                                <input type="email" name="email" id="email" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="phone">
+                                <span>PHONE NUMBER</span>
+                                <input type="tel" name="phone" id="phone">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="password">
+                                <span>PASSWORD*</span>
+                                <input type="password" name="password" id="password" required
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+                            </label>
+                            <span class="error">
+                                *Password must contain: at least 6 characters, 
+                                at least 1 uppercase character,
+                                at least 1 lowercase character,
+                                at least 1 number
+                            </span>
+                        </p>
+                        <p>
+                            <label for="c-password">
+                                <span>CONFIRM PASSWORD*</span>
+                                <input type="password" name="c_password" id="c-password" required
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+                            </label>
+                            <span class="error">*Passwords must match</span>
+                        </p>
+                    </section>
+                    <section>
+                        <p><button type="submit">Create Account</button></p>
+                    </section>
+                </form>
+                <p>
+                    Already have an account?
+                    <a href="log-in-page">Log in</a>
+                </p>
+            </div>
         </div>
     </main>
 </body>
+
 </html>
