@@ -26,33 +26,37 @@
                     like this in your life to help you realize your
                     deepest dreams. Sign up <em>now</em> to get started.</em></p>
                 <p>You <em>know</em> you want to.</p>
-                <form action="/post-script" method="post">
+                <form novalidate>
                     <section>
                         <h3>Let's do this!</h3>
                         <p>Required fields are followed by *.</p>
                         <p>
-                            <label for="fname">
-                                <span>FIRST NAME*</span>
-                                <input type="text" name="first_name" id="fname" required>
+                            <label for="name">
+                                <span>NAME*</span>
+                                <input type="text" name="name" id="name" pattern="[a-zA-Z]+" required>
                             </label>
+                            <span class="error"></span>
                         </p>
                         <p>
-                            <label for="lname">
-                                <span>LAST NAME</span>
-                                <input type="text" name="last_name" id="lname">
+                            <label for="zip">
+                                <span>ZIP CODE</span>
+                                <input type="text" name="zip" id="zip" minlength="6" maxlength="6" required>
                             </label>
+                            <span class="error"></span>
                         </p>
                         <p>
                             <label for="email">
                                 <span>EMAIL*</span>
-                                <input type="email" name="email" id="email" required>
+                                <input type="email" name="email" id="email" minlength="8" required>
                             </label>
+                            <span class="error"></span>
                         </p>
                         <p>
-                            <label for="phone">
-                                <span>PHONE NUMBER</span>
-                                <input type="tel" name="phone" id="phone">
+                            <label for="country">
+                                <span>COUNTRY</span>
+                                <input type="tel" name="country" id="country" pattern="[a-zA-Z]+" required>
                             </label>
+                            <span class="error"></span>
                         </p>
                         <p>
                             <label for="password">
@@ -60,20 +64,15 @@
                                 <input type="password" name="password" id="password" required
                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
                             </label>
-                            <span class="error">
-                                *Password must contain: at least 6 characters, 
-                                at least 1 uppercase character,
-                                at least 1 lowercase character,
-                                at least 1 number
-                            </span>
+                            <span class="error"></span>
                         </p>
                         <p>
                             <label for="c-password">
                                 <span>CONFIRM PASSWORD*</span>
-                                <input type="password" name="c_password" id="c-password" required
+                                <input type="password" name="c_password" id="confPassword" required
                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
                             </label>
-                            <span class="error">*Passwords must match</span>
+                            <span class="error"></span>
                         </p>
                     </section>
                     <section>
